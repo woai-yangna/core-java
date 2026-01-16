@@ -1,0 +1,27 @@
+package com.coder.homework2;
+
+/**
+ * @author suyongkang
+ * @project core-java
+ * @date 2026/1/16
+ */
+public class NerAdmin {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void check(Student student){
+        System.out.println("网管"+name+"检查:");
+        int age=student.getAge();
+        if(age>=18){
+            System.out.println(student.getName()+"可以上网");
+        }else{
+            System.out.println(student.getName()+"不可以上网");
+        }
+    }
+}
