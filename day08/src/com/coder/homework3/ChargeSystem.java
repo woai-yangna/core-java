@@ -16,7 +16,7 @@ public class ChargeSystem {
                 System.out.println(car.getNum()+"需要交费8元");
             }else{
                 if(y!=0){
-                    int p=(x+1-1)*5+8;
+                    int p=(x-1+1)*5+8;
                     System.out.println(car.getNum()+"需要交费"+p+"元");
                 }else{
                     int p=(x-1)*5+8;

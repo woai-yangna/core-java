@@ -15,11 +15,21 @@ public class Monitor {
         System.out.println("车辆类型");
         String type=sc.next();
         System.out.println("驶入时间");
-        int inHour=sc.nextInt();
-        int inMinute= sc.nextInt();
+        int inHour = sc.nextInt();
+        sc.nextLine();
+
+        System.out.println("驶入分钟");
+        int inMinute = sc.nextInt();
+        sc.nextLine();
+
         System.out.println("驶出时间");
-        int outHour=sc.nextInt();
-        int outMinute= sc.nextInt();
-        return new Car(num,type,inHour,inMinute,outHour,outMinute);
+        int outHour = sc.nextInt();
+        sc.nextLine();
+
+        System.out.println("驶出分钟");
+        int outMinute = sc.nextInt();
+        sc.nextLine();
+
+        return new Car(num,type,inHour,outHour,inMinute,outMinute);
     }
 }
