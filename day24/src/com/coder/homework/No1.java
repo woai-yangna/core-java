@@ -24,9 +24,9 @@ public class No1 {
             serialize(student);
         }
         Teacher teacher=new Teacher();
-        teacher.setName(readInfo("student.name"));
-        teacher.setGender(readInfo("student.name"));
-        teacher.setAge(Integer.parseInt(readInfo("student.name")));
+        teacher.setName(readInfo("teacher.name"));
+        teacher.setGender(readInfo("teacher.gender"));
+        teacher.setAge(Integer.parseInt(readInfo("teacher.age")));
         saveTeacherInfo(teacher);
     }
     public static User login() throws IOException, ClassNotFoundException {
@@ -37,7 +37,7 @@ public class No1 {
         if(!b){
             System.out.println("登录失败");
         }else{
-            ObjectInputStream os= new ObjectInputStream(new FileInputStream("d:/r"+name));
+            ObjectInputStream os= new ObjectInputStream(new FileInputStream("d:/r/" + name + ".user"));
             User o = (User)os.readObject();
             String password = o.getPassword();
             System.out.println("用户输入密码");

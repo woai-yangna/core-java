@@ -23,6 +23,7 @@ public class Register {
             user.setName(name);
             user.setPassword(password);
             File dir=new File("d:/r");
+            dir.mkdirs();
             File file=new File(dir,name+".user");
             ObjectOutputStream os=new ObjectOutputStream(new FileOutputStream(file));
             os.writeObject(user);
@@ -30,15 +31,6 @@ public class Register {
         }
     }
     public static boolean FindName(String name, String dir){
-        File f1=new File(dir);
-        File[] files = f1.listFiles();
-        String fileName= f1.getName();
-        String substring = fileName.substring(0, fileName.lastIndexOf("."));
-        for (File file : files) {
-            if(name.equals(substring)){
-                return true;
-            }
-        }
-        return  false;
+        return new File(dir, name + ".user").isFile();
     }
 }

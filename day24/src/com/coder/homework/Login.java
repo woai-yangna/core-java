@@ -19,7 +19,7 @@ public class Login {
         if(!b){
             System.out.println("注册失败");
         }else{
-            ObjectInputStream  os= new ObjectInputStream(new FileInputStream("d:/r"+name));
+            ObjectInputStream  os= new ObjectInputStream(new FileInputStream("d:/r/" + name + ".user"));
             User o = (User)os.readObject();
             String password = o.getPassword();
             System.out.println("用户输入密码");
