@@ -18,7 +18,6 @@ public class Register {
             System.out.println("注册失败");
         }else{
             System.out.println("输入密码");
-            String password = sc.next();
             User user=new User();
             user.setName(name);
             user.setPassword(password);

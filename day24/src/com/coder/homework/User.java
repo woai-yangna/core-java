@@ -29,7 +29,7 @@ public class User implements Serializable {
     }
 
     @Override
-    public String toString() {
+    public String wwwwtoString() {
         return "User{" +
                 "name='" + name + '\'' +
                 ", password='" + password + '\'' +
